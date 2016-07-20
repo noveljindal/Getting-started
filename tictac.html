@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1,div {
+    text-align: center;
+}
+</style>
+<body>
+	<title>TicTacToe</title>
+	<h1>TicTacToe</h1>
+	<div>
+    <input type="button" id="k1" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k2" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k3" value="  " onclick="tictactoe(this)">
+    <br />
+	</div>
+	<div>
+    <input type="button" id="k4" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k5" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k6" value="  " onclick="tictactoe(this)">
+    <br />
+	</div>
+	<div>
+    <input type="button" id="k7" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k8" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k9" value="  " onclick="tictactoe(this)">
+    </div>
+	<script>
+	var count = 1;
+	
+	function tictactoe(square) {
+
+	if(count%2==1)
+	{
+
+        
+		if(square.value=="  ")
+			square.value="X";
+		else
+			alert("That square has been clicked.click on any empty square");
+	
+	xwon();
+	
+	count++;
+	
+	}
+	else
+	{
+
+        	if(square.value=="  ")
+			square.value="O";
+		else
+			alert("That square has been clicked.click on any empty square");
+	owon();	
+	count++;
+	
+	}
+            if(count==10){
+		alert("Draw");
+	}
+
+	}
+		function xwon(){
+		if(document.getElementById("k1").value =="X"&& document.getElementById("k2").value =="X"&&document.getElementById("k3").value =="X"||
+		   document.getElementById("k4").value =="X"&& document.getElementById("k5").value =="X"&&document.getElementById("k6").value =="X"||
+		   document.getElementById("k7").value =="X"&& document.getElementById("k8").value =="X"&&document.getElementById("k9").value =="X"||
+		   document.getElementById("k1").value =="X"&& document.getElementById("k4").value =="X"&&document.getElementById("k7").value =="X"||
+		   document.getElementById("k2").value =="X"&& document.getElementById("k5").value =="X"&&document.getElementById("k8").value =="X"||
+		   document.getElementById("k3").value =="X"&& document.getElementById("k6").value =="X"&&document.getElementById("k9").value =="X"||
+		   document.getElementById("k1").value =="X"&& document.getElementById("k5").value =="X"&&document.getElementById("k9").value =="X"||
+		   document.getElementById("k7").value =="X"&& document.getElementById("k5").value =="X"&&document.getElementById("k3").value =="X" )
+			alert("X won");
+		
+		}
+		function owon()
+		{if(document.getElementById("k1").value =="O"&& document.getElementById("k2").value =="O"&&document.getElementById("k3").value =="O"||
+		   document.getElementById("k4").value =="O"&& document.getElementById("k5").value =="O"&&document.getElementById("k6").value =="O"||
+		   document.getElementById("k7").value =="O"&& document.getElementById("k8").value =="O"&&document.getElementById("k9").value =="O"||
+		   document.getElementById("k1").value =="O"&& document.getElementById("k4").value =="O"&&document.getElementById("k7").value =="O"||
+		   document.getElementById("k2").value =="O"&& document.getElementById("k5").value =="O"&&document.getElementById("k8").value =="O"||
+		   document.getElementById("k3").value =="O"&& document.getElementById("k6").value =="O"&&document.getElementById("k9").value =="O"||
+		   document.getElementById("k1").value =="O"&& document.getElementById("k5").value =="O"&&document.getElementById("k9").value =="O"||
+		   document.getElementById("k7").value =="O"&& document.getElementById("k5").value =="O"&&document.getElementById("k3").value =="O" )
+			alert("O won");
+		
+		}
+	
+            
+        
+    </script>
+</body>
+</html>
