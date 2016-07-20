@@ -4,26 +4,29 @@
 h1,div {
     text-align: center;
 }
+
+	
+
 </style>
 <body>
 	<title>TicTacToe</title>
 	<h1>TicTacToe</h1>
 	<div>
-    <input type="button" id="k1" value="  " onclick="tictactoe(this)">
-    <input type="button" id="k2" value="  " onclick="tictactoe(this)">
-    <input type="button" id="k3" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k1" value="  " onclick="tictactoe(this)" style="padding: 20px;">
+    <input type="button" id="k2" value="  " onclick="tictactoe(this)" style="padding: 20px;">
+    <input type="button" id="k3" value="  " onclick="tictactoe(this)" style="padding: 20px;">
     <br />
 	</div>
 	<div>
-    <input type="button" id="k4" value="  " onclick="tictactoe(this)">
-    <input type="button" id="k5" value="  " onclick="tictactoe(this)">
-    <input type="button" id="k6" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k4" value="  " onclick="tictactoe(this)" style="padding: 20px;">
+    <input type="button" id="k5" value="  " onclick="tictactoe(this)" style="padding: 20px;">
+    <input type="button" id="k6" value="  " onclick="tictactoe(this)" style="padding: 20px;">
     <br />
 	</div>
 	<div>
-    <input type="button" id="k7" value="  " onclick="tictactoe(this)">
-    <input type="button" id="k8" value="  " onclick="tictactoe(this)">
-    <input type="button" id="k9" value="  " onclick="tictactoe(this)">
+    <input type="button" id="k7" value="  " onclick="tictactoe(this)" style="padding: 20px;">
+    <input type="button" id="k8" value="  " onclick="tictactoe(this)" style="padding: 20px;">
+    <input type="button" id="k9" value="  " onclick="tictactoe(this)" style="padding: 20px;">
     </div>
 	<script>
 	var count = 1;
@@ -37,8 +40,10 @@ h1,div {
 		if(square.value=="  ")
 			square.value="X";
 		else
+			{
 			alert("That square has been clicked.click on any empty square");
-	
+			count--;
+			}
 	xwon();
 	
 	count++;
@@ -50,7 +55,10 @@ h1,div {
         	if(square.value=="  ")
 			square.value="O";
 		else
+			{
 			alert("That square has been clicked.click on any empty square");
+			count--;
+			}
 	owon();	
 	count++;
 	
