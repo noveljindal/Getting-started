@@ -1,5 +1,6 @@
 
-function userstring(str){
+function userstring(){
+	var str = document.getElementById("ename").value;
 		if (str.length == 0) { 
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -15,3 +16,10 @@ function userstring(str){
     }
    
 }
+
+	$(document).ready(function(){
+    
+    $("input").keyup(function(){
+        userstring();
+    });
+	});
